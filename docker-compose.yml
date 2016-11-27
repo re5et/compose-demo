@@ -1,0 +1,21 @@
+version: '2'
+services:
+  web:
+    build: .
+    ports:
+      - "80:80"
+    volumes:
+      - .:/code
+    depends_on:
+      - redis
+  redis:
+    image: redis
+  test:
+    build: .
+    command: npm run -s test
+    environment:
+      MOCHA_FLAGS: --watch
+    volumes:
+      - .:/code
+    depends_on:
+      - web
