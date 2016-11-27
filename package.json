@@ -1,5 +1,5 @@
 {
-  "name": "docker-play",
+  "name": "compose-demo",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
