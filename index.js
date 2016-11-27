@@ -1,6 +1,4 @@
-const http = require('http')
-const redis = require('redis')
-const redisClient = redis.createClient({
+const redisClient = require('redis').createClient({
   host: 'redis',
 })
 
@@ -14,6 +12,6 @@ const handler = (req, res) => {
   })
 }
 
-http.createServer(handler).listen(80, () => {
-  console.log('server is up')
+const server = require('http').createServer(handler).listen(80, () => {
+  console.log('server is up on port:', server.address().port)
 })
