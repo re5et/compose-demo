@@ -2,10 +2,10 @@
   "name": "compose-demo",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/",
   "scripts": {
-    "start": "forever --watch index.js",
-    "test": "./node_modules/.bin/mocha $MOCHA_FLAGS *Spec.js"
+    "start": "forever --watch src",
+    "test": "./node_modules/.bin/mocha $MOCHA_FLAGS specs/**/*Spec.js"
   },
   "author": "",
   "license": "ISC",
